@@ -19,6 +19,7 @@ namespace ArdalisRating
         {
             _logger.Log("Rating LAND policy...");
             _logger.Log("Validating policy.");
+           
 
             if (policy.BondAmount == 0 || policy.Valuation == 0)
             {
@@ -30,7 +31,7 @@ namespace ArdalisRating
                 _logger.Log("Insufficient bond amount.");
                 return;
             }
-            Rating = policy.BondAmount * 0.05m;
+            _engine.Rating = policy.BondAmount * 0.05m;
         }
 
  

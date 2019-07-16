@@ -29,9 +29,9 @@ namespace ArdalisRating
             {
                 if (policy.Deductible < 500)
                 {
-                    Rating = 1000m;
+                    _engine.Rating = 1000m;
                 }
-                Rating = 900m;
+                _engine.Rating = 900m;
             }
         }
     }
