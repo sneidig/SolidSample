@@ -12,13 +12,12 @@ namespace ArdalisRating
             {
                 case PolicyType.Auto:
                     return new AutoPolicyRater(engine, engine.Logger);
-                    break;
                 case PolicyType.Land:
                     return new LandPolicyRater(engine, engine.Logger);
-                    break;
                 case PolicyType.Life:
                     return new LifePolicyRater(engine, engine.Logger);
-                    break;
+                case PolicyType.Flood:
+                    return new FloodPolicyRater(engine, engine.Logger);
                 default:
                     Logger.Log("Unknown policy type");
                     break;
